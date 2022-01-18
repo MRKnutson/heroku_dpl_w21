@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import MemeForm from './MemeForm'
 
 const Memes = ()=>{
   const [memes, setMemes]=useState([])
@@ -21,6 +22,7 @@ const Memes = ()=>{
     <div>
       <h1>Memes</h1>
       <p>{JSON.stringify(memes)}</p>
+      <MemeForm />
     </div>
   )
 }
