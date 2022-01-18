@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   namespace :api do
     get '/memes', to: "memes#index"
   end
+
+  get '*other', to: 'static#index'
 end
