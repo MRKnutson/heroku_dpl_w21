@@ -5,6 +5,9 @@ class Api::MemesController < ApplicationController
 
   def create
     file = params[:file]
+    p "-----------------"
+    p file
+    p "-----------------"
     if (file)
       begin
         cloud_image = Cloudinary::Uploader.upload(file, public_id: file.original_filename, secure: true, resources_type: "auto")
